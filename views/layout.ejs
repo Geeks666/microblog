@@ -1,0 +1,63 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title><%= title%>-microblog</title>
+	<link href="//cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.css" rel="stylesheet">
+	<style>
+		body{
+			padding-top:60px;
+			padding-bottom:40px;
+		}
+	</style>
+	<link href="//cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">	
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a href="" class="brand">micriblog</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li class="active"><a href="/">首页</a></li>
+						<% if (!user) {%>
+						<li><a href="/login">Log in</a></li>
+						<li><a href="/reg">Sign up</a></li>
+						<% } else { %>
+						<li><a href="/logout">退出</a></li>
+						<% } %>
+					</ul>
+
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="container">
+		<% if (success) { %>
+			<div class="alert alert-success">
+				<%= success %>
+			</div>
+		<% } %>
+		<% if (error) { %>
+			<div class="alert alert-error">
+				<%= error %>
+			</div>
+		<% } %>
+		<%- body%>
+	</div>
+	<div id="container" class="container">
+		<hr>
+		<footer>
+			<p>
+				<a href="www.byvoid.com/" target="_blank">ByVoid</a>2012
+			</p>
+		</footer>
+	</div>
+</body>
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</html>

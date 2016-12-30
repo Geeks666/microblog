@@ -1,0 +1,27 @@
+	<% if (!user) { %>
+	<div class="hero-unit">
+		<h1>欢饮来到demo</h1>
+		<p>microblong 是基于node.js的微博系统。</p>
+		<p>
+			<a href="/login" class="btn btn-primary btn-large">登录</a>
+			<a href="/reg" class="btn btn-large">立即注册</a>
+		</p>
+	</div>
+	<% } else { %>
+	  <%- partial('say') %>
+	<% } %>
+	<%- partial('posts',posts) %> 
+	<div class="row">
+		<div class="span4">
+			<h2>Carbo说</h2>
+			<p>东风破早梅 咸暖一枝花 冰雪无人见 春从天上来</p>
+		</div>
+		<div class="span4">
+			<h2>ByVoid说</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, inventore, voluptatem, id iure doloremque recusandae expedita magnam aut ut magni impedit repudiandae veniam mollitia. Quaerat, laborum eum voluptatem temporibus architecto.</p>
+		</div>
+		<div class="span4">
+			<h2>佛说</h2>
+			<p>中州韵输入法引擎/Rime Input Method Engine取义历史上通行的中州韵Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, repellendus ipsam dolore fuga libero ex nemo quaerat doloribus odio nesciunt numquam ipsa molestias deleniti voluptate incidunt assumenda voluptatum ut voluptatem.</p>
+		</div>
+	</div>
